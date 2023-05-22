@@ -1,0 +1,18 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/niran/mazebot/install/mazebot/lib/python3.10/site-packages",
+        "/home/niran/maze_bot/path_planning_ws/install/maze_bot/lib/python3.10/site-packages",
+        "/home/niran/ugv_ws/install/ugv/lib/python3.10/site-packages",
+        "/home/niran/ugv_ws/install/py_pubsub/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/niran/mazebot/install/mazebot/lib/python3.10/site-packages",
+        "/home/niran/maze_bot/path_planning_ws/install/maze_bot/lib/python3.10/site-packages",
+        "/home/niran/ugv_ws/install/ugv/lib/python3.10/site-packages",
+        "/home/niran/ugv_ws/install/py_pubsub/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

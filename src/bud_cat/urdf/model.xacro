@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="cherry">
+
+<xacro:property name="body_width" value="1.0" />
+<xacro:property name="body_len" value="1.2" />
+<xacro:property name="body_thickness" value="0.2" />
+<xacro:property name="leg_len" value="0.5" />
+<xacro:property name="hind_len" value="0.5" />
+
+
+ <link name="base_link">
+    <visual>
+        <geometry>
+            <box size="${body_width} ${body_len} ${body_thickness}"/>
+        </geometry>
+        <material name="blue"/>
+    </visual>
+    <collision>
+        <geometry>
+            <box size="${body_width} ${body_len} ${body_thickness}"/>
+        </geometry>
+    </collision>
+</link>
+</robot>
