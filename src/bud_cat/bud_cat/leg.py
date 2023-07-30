@@ -2,6 +2,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
 from sensor_msgs.msg import JointState
+from math import pi
 class StatePublisher(Node):
 
     def __init__(self):
@@ -23,7 +24,8 @@ class StatePublisher(Node):
         leg_FL_angle = 0.0
         thigh_BL_angle = 0.0
         leg_BL_angle = 0.0
-        i= 0.01
+        i1= 0.01
+        i2 = 0.03
         
 
         # message declarations
@@ -41,9 +43,13 @@ class StatePublisher(Node):
                 self.joint_pub.publish(joint_state)
                 
                 if(thigh_FR_angle <= -1.57 or thigh_FR_angle >= 1.57):
-                    i = -i 
+                    i1 = -i1 
+                thigh_FR_angle = thigh_FR_angle +i1  
 
-                thigh_FR_angle = thigh_FR_angle +i    
+                if(leg_FR_angle <= -pi or leg_FR_angle >= 0):
+                    i2 = -i2 
+                leg_FR_angle += i2
+
                 # This will adjust as needed per iteration
                 loop_rate.sleep()
 
