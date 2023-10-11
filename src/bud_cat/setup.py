@@ -28,6 +28,7 @@ setup(
     entry_points={
         'console_scripts': [
              'state_publisher = bud_cat.leg:main',
+             'joint_test = bud_cat.jointTest:main',
         ],
     },
 )

@@ -42,7 +42,7 @@ class StatePublisher(Node):
                 joint_state.position = [thigh_FR_angle,leg_FR_angle,thigh_BR_angle,leg_BR_angle,thigh_FL_angle,leg_FL_angle,thigh_BL_angle,leg_BL_angle]
                 self.joint_pub.publish(joint_state)
                 
-                if(thigh_FR_angle <= -1.57 or thigh_FR_angle >= 1.57):
+                if(thigh_FR_angle <= -pi or thigh_FR_angle >= pi):
                     i1 = -i1 
                 thigh_FR_angle = thigh_FR_angle +i1  
 
